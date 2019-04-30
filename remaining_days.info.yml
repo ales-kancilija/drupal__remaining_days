@@ -1,0 +1,5 @@
+name: Remaining days
+description: Display number of days remaining to the event
+core: 8.x
+type: module
+package: Custom
