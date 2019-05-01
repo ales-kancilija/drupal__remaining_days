@@ -10,16 +10,14 @@ class RemainingDays {
             $now = time();
             $days = floor(($event_time - $now)/60/60/24);
 
-            if ($days < -1) {
+            if ($days < 0) {
                 $text = "This event already passed.";
-            } else if ($days == -1) {
-                $text = "This event is happening today.";
             } else if ($days == 0) {
-                $text = "This event is happening tomorrow.";
+                $text = "This event is happening today.";
             } else if ($days == 1) {
-                $text = "1 day left until event starts.";
+                $text = "This event is happening tomorrow.";
             } else if ($days > 1) {
-                $text = ($days)."  days left until event starts.";
+                $text = $days."  days left until event starts.";
             }
         }
         return $text;
